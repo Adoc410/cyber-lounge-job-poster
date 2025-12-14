@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Lounge Kitgum – Job Advertisement</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", "Helvetica", sans-serif;
+        }
+        body {
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        .poster {
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+            background: white;
+            border: 6px solid #000;
+            padding: 20mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 12px;
+        }
+        .header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .header h2 {
+            font-size: 22px;
+            font-weight: normal;
+        }
+        .location {
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .content p {
+            font-size: 17px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .jobs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .job {
+            border: 2px solid #000;
+            padding: 10px;
+            font-size: 17px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .requirements {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .requirements h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        .requirements ul {
+            list-style: none;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .footer {
+            border-top: 3px solid #000;
+            padding-top: 12px;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .footer strong {
+            font-size: 19px;
+        }
+        .contact {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .print-btn {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* ===== PRINT SETTINGS ===== */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .poster {
+    width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Remove anything that causes page breaks */
+  header,
+  footer {
+    display: none;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="printPoster()">🖨️ Print Poster</button>
+
+<div class="poster">
+    <div class="header">
+        <h1>CYBER LOUNGE KITGUM</h1>
+        <h2>JOB VACANCIES ANNOUNCEMENT</h2>
+        <div class="location">TE KI TUBA BUS PARK – BARDEGE</div>
+    </div>
+
+    <div class="content">
+        <h3>WE ARE HIRING</h3>
+        <p>Cyber Lounge Kitgum invites qualified, hardworking, and motivated individuals to apply for the following positions:</p>
+
+        <div class="jobs">
+            <div class="job">Manager</div>
+            <div class="job">Cashier</div>
+            <div class="job">Cleaner</div>
+            <div class="job">Pool Attendant</div>
+            <div class="job">Bouncer / Security Guard</div>
+            <div class="job">Waitress</div>
+            <div class="job">Waiter</div>
+            <div class="job">Chef</div>
+        </div>
+
+        <div class="requirements">
+            <h4>REQUIREMENTS</h4>
+            <ul>
+                <li>• Letter of recommendation from LC I</li>
+                <li>• Must be hardworking and reliable</li>
+                <li>• Good communication skills</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Interested applicants should submit their applications directly to the management of <strong>Cyber Lounge Kitgum</strong>.</p>
+        <p><strong>Location:</strong> TE KI TUBA Bus Park, Bardege</p>
+        <div class="contact">📞 For more information, call:<br>0781932182 / 0789350584</div>
+        <p style="margin-top: 10px;"><strong>Management – Cyber Lounge Kitgum</strong></p>
+    </div>
+</div>
+
+<script>
+    function printPoster() {
+        window.print();
+    }
+</script>
+
+</body>
+</html>
